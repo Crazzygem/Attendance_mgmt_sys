@@ -118,7 +118,7 @@ python main.py
   2. Report
   3. Export
   4. Exit
-──────────────────────────────────────────────────
+─────────────────────────────────────────────────
 ```
 
 ### Operation Menu
@@ -126,16 +126,16 @@ python main.py
 Check in/out employees and request leave. Shows today's attendance in real-time.
 
 ```
-──────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────
   OPERATION
-──────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────
 +------+----------+------------+-------------+-------------+
 | ID   | Name     | Check In   | Check Out   | Status      |
 +======+==========+============+=============+=============+
 | E001 | Sokha    | 08:02      | 17:05       | Checked Out |
-| E002 | Channary | —          | —           | Absent     |
+| E002 | Channary | —          | —           | Absent      |
 +------+----------+------------+-------------+-------------+
-──────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────
   1. Check-in
   2. Check-out
   3. Leave Request
@@ -192,44 +192,3 @@ If you see module import errors:
 # Reinstall dependencies
 pip install --upgrade pandas openpyxl tabulate colorama
 ```
-
-### Virtual Environment Issues
-If venv activation fails:
-```bash
-# Delete and recreate venv
-rm -rf venv
-python -m venv venv
-source venv/bin/activate
-pip install pandas openpyxl tabulate colorama
-```
-
-### Clear Compiled Python Cache
-If you encounter stale bytecode issues:
-```bash
-find . -type d -name __pycache__ -exec rm -rf {} +
-```
-
-## Development
-
-### Running Tests (when available)
-```bash
-# Run all tests
-python -m pytest
-
-# Run single test
-python -m pytest -k test_name
-
-# Run with coverage
-python -m pytest --cov=. --cov-report=term-missing
-```
-
-### Code Style
-This project follows the conventions documented in `AGENTS.md` for AI agents.
-
-## License
-
-This project is provided as-is for educational purposes.
-
-## Support
-
-For issues or questions, refer to `AGENTS.md` for coding guidelines and development practices.
